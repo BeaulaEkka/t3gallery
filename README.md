@@ -2,17 +2,17 @@
 
 ## TODO
 
--[] Make it deploy (vercel)
--[] Scaffold basic ui with mock data
--[] Actually set a database(postgres vercel)
--[] Attach database to UI
--[] Add Authentication (w/clerk)
--[] Add image upload
--[] Error Management (w/sentry)
--[] Routing/image page(patallel route)
--[] Delete button(server Action)
--[] Analytics (posthog)
--[] Ratelimiting(upstash)
+- [x] Make it deploy (vercel)
+- [x] Scaffold basic ui with mock data
+- [] Actually set a database(postgres vercel)
+- [] Attach database to UI
+- [] Add Authentication (w/clerk)
+- [] Add image upload
+- [] Error Management (w/sentry)
+- [] Routing/image page(patallel route)
+- [] Delete button(server Action)
+- [] Analytics (posthog)
+- [] Ratelimiting(upstash)
 
 # Create T3 App
 
