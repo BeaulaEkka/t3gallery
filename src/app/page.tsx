@@ -11,7 +11,14 @@ async function Images() {
     <div className="m-auto flex w-[80%] flex-wrap gap-4  ">
       {images.map((image) => (
         <div key={image.id} className="">
-          <Image src={image.url} width={350} height={350} alt="Images" />
+          <Image
+            src={image.url}
+            width={250}
+            height={250}
+            alt={image.name}
+            style={{ objectFit: "cover", width: "250px", height: "250px" }}
+           
+          />
         </div>
       ))}
     </div>
