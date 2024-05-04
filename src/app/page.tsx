@@ -13,11 +13,10 @@ async function Images() {
         <div key={image.id} className="">
           <Image
             src={image.url}
-            width={250}
-            height={250}
+            width={350}
+            height={350}
             alt={image.name}
-            style={{ objectFit: "cover", width: "250px", height: "250px" }}
-           
+            style={{ objectFit: "cover", width: "350px", height: "350px" }}
           />
         </div>
       ))}
