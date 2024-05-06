@@ -1,22 +1,14 @@
-import Image from "next/image";
 import { getImage } from "~/server/queries";
+import ModalComponent from "~/app/@modal/(.)photo/[id]/ModalComponent";
 
-export default async function PhotoModal({
+export default function ModalPage({
   params: { id: photoId },
 }: {
-  params: { id: string };
+  params: {
+    id: string;
+  };
 }) {
   const idAsNumber = Number(photoId);
-  const image = await getImage(idAsNumber);
-  return (
-    <div>
-      <Image
-        src={image.url}
-        width={250}
-        height={250}
-        alt="photo"
-       
-      />
-    </div>
-  );
+  if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id");
+  return <ModalComponent id={idAsNumber} />;
 }

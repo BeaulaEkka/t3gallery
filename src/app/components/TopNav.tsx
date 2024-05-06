@@ -3,6 +3,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { UploadButton } from "~/utils/uploadthing";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const TopNav = () => {
   const router = useRouter();
@@ -11,7 +12,10 @@ export const TopNav = () => {
     <div>
       {" "}
       <nav className="flex w-full items-center justify-between  border   p-4 text-xl font-semibold shadow-md ">
-        <div className="">Gallery</div>
+        <Link href="/">
+          {" "}
+          <div className="">Gallery</div>
+        </Link>
         <div className="flex flex-row">
           <SignedOut>
             <SignInButton />

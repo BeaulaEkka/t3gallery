@@ -1,24 +1,18 @@
-import Image from "next/image";
-import { getImage } from "~/server/queries";
+import Modal from "./Modal";
+import ModalComponent from "./ModalComponent";
 
-export default async function PhotoModal({
+export default function PhotoModal({
   params: { id: photoId },
 }: {
   params: { id: string };
 }) {
   const idAsNumber = Number(photoId);
-  const image = await getImage(idAsNumber);
+
   return (
     <div>
-      <div>
-        <Image
-          src={image.url}
-          width={550}
-          height={550}
-          alt="photo"
-          className="rounded-lg"
-        />
-      </div>
+      <Modal>
+        <ModalComponent id={idAsNumber} />
+      </Modal>
     </div>
   );
 }

@@ -10,8 +10,9 @@
 - [x] Add Authentication (with clerk)
 - [x] Add image upload
 - [x] "taint" (server-only)/handling best server behaviours
-- [] Error Management (w/sentry)
-- [] Routing/image page(patallel route)
+- [x] Error Management (w/sentry)
+- [x] Routing/image page(patallel route)
+- [x] createPortal/Modal ReactDOM
 - [] Delete button(server Action)
 - [] Analytics (posthog)
 - [] Ratelimiting(upstash)
