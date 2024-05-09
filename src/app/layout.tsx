@@ -1,4 +1,5 @@
 import "~/styles/globals.css";
+
 import {
   ClerkProvider,
   SignInButton,
@@ -40,6 +41,7 @@ export default function RootLayout({
           {children}
           {modal}
           <div id="modal-root" />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>

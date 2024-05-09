@@ -4,14 +4,14 @@ import { UploadButton } from "~/utils/uploadthing";
 import React from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { SimpleUploadButton } from "../_components/SimpleUPloadButton";
+import { abort } from "process";
 
 export const TopNav = () => {
-  const router = useRouter();
-
   return (
     <div>
       {" "}
-      <nav className="flex w-full items-center justify-between  border   p-4 text-xl font-semibold shadow-md ">
+      <nav className="fixed flex w-full items-center justify-between border  bg-white   p-4 text-xl font-semibold shadow-md ">
         <Link href="/">
           {" "}
           <div className="">Gallery</div>
@@ -21,12 +21,13 @@ export const TopNav = () => {
             <SignInButton />
           </SignedOut>
           <SignedIn>
-            <UploadButton
+            {/* <UploadButton
               endpoint="imageUploader"
               onClientUploadComplete={() => {
                 router.refresh();
               }}
-            />
+            /> */}
+            <SimpleUploadButton />
             <UserButton />
           </SignedIn>
         </div>

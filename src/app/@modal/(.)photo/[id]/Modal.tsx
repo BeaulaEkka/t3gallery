@@ -23,7 +23,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
       onClose={onDismiss}
     >
       {children}
-      {/* <button type="button" onClick={onDismiss} className="close-button" /> */}
+      <button type="button" onClick={onDismiss} className="close-button" />
     </dialog>,
     document.getElementById("modal-root")!,
   );
