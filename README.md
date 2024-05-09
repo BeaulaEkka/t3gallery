@@ -14,6 +14,7 @@
 - [x] Routing/image page(patallel route)
 - [x] createPortal/Modal ReactDOM
 - [x] Set up ShadUi for toaster
+- [x] Set up loading spinner from Flowbite-tailwindcss
 - [] Delete button(server Action)
 - [] Analytics (posthog)
 - [] Ratelimiting(upstash)

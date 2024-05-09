@@ -2,6 +2,7 @@ import { useRouter } from "next/navigation";
 import { useUploadThing } from "~/utils/uploadthing";
 import IconIconUpload from "./IconIconUpload";
 import { toast } from "sonner";
+import ToastSpinner from "./ToastSpinner";
 
 type Input = Parameters<typeof useUploadThing>;
 const useUploadThingInputProps = (...args: Input) => {
@@ -29,10 +30,18 @@ export function SimpleUploadButton() {
   const router = useRouter();
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-      toast("...uploading", {
-        duration: 100000,
-        id: "upload-begin",
-      });
+      toast(
+        <div className="flex items-center justify-center">
+          <div className="mr-2">
+            <ToastSpinner />
+          </div>{" "}
+          <div className="text-md">Uploading</div>{" "}
+        </div>,
+        {
+          duration: 100000,
+          id: "upload-begin",
+        },
+      );
     },
     onClientUploadComplete() {
       toast.dismiss("upload-begin");
