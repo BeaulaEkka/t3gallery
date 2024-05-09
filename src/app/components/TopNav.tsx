@@ -3,7 +3,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import React from "react";
 // import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { SimpleUploadButton } from "../_components/SimpleUPloadButton";
+import { SimpleUploadButton } from "../_components/SimpleUploadButton";
 import { abort } from "process";
 
 export const TopNav = () => {

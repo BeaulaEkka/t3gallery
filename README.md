@@ -10,7 +10,7 @@
 - [x] Add Authentication (with clerk)
 - [x] Add image upload
 - [x] "taint" (server-only)/handling best server behaviours
-- [x] Error Management (w/sentry)
+
 - [x] Routing/image page(patallel route)
 - [x] createPortal/Modal ReactDOM
 - [x] Set up ShadUi for toaster
