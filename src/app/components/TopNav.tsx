@@ -1,8 +1,8 @@
 "use client";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { UploadButton } from "~/utils/uploadthing";
+
 import React from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { SimpleUploadButton } from "../_components/SimpleUPloadButton";
 import { abort } from "process";
@@ -21,12 +21,6 @@ export const TopNav = () => {
             <SignInButton />
           </SignedOut>
           <SignedIn>
-            {/* <UploadButton
-              endpoint="imageUploader"
-              onClientUploadComplete={() => {
-                router.refresh();
-              }}
-            /> */}
             <SimpleUploadButton />
             <UserButton />
           </SignedIn>

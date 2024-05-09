@@ -13,6 +13,7 @@
 - [x] Error Management (w/sentry)
 - [x] Routing/image page(patallel route)
 - [x] createPortal/Modal ReactDOM
+- [x] Set up ShadUi for toaster
 - [] Delete button(server Action)
 - [] Analytics (posthog)
 - [] Ratelimiting(upstash)
