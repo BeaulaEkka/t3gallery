@@ -31,11 +31,9 @@ export function SimpleUploadButton() {
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
       toast(
-        <div className="flex items-center justify-center">
-          <div className="mr-2">
-            <ToastSpinner />
-          </div>{" "}
-          <div className="text-md">Uploading</div>{" "}
+        <div className="flex items-center justify-center gap-2">
+          <ToastSpinner />
+          <span className="text-lg">Uploading...</span>{" "}
         </div>,
         {
           duration: 100000,
@@ -45,7 +43,7 @@ export function SimpleUploadButton() {
     },
     onClientUploadComplete() {
       toast.dismiss("upload-begin");
-      toast("upload complete!");
+      toast("Upload complete!");
       router.refresh();
     },
   });
