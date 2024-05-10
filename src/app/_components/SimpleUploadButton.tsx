@@ -3,6 +3,7 @@ import { useUploadThing } from "~/utils/uploadthing";
 import IconIconUpload from "./IconIconUpload";
 import { toast } from "sonner";
 import ToastSpinner from "./ToastSpinner";
+import { usePostHog } from "posthog-js/react";
 
 type Input = Parameters<typeof useUploadThing>;
 const useUploadThingInputProps = (...args: Input) => {
@@ -28,8 +29,11 @@ const useUploadThingInputProps = (...args: Input) => {
 
 export function SimpleUploadButton() {
   const router = useRouter();
+  const posthog = usePostHog()
+
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
+      posthog.capture("upload_begin")
       toast(
         <div className="flex items-center justify-center gap-2">
           <ToastSpinner />
