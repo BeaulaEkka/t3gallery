@@ -16,7 +16,7 @@
 - [x] Set up ShadUi for toaster
 - [x] Set up loading spinner from Flowbite-tailwindcss
 - [] Delete button(server Action)
-- [] Analytics (posthog)
+- [x] Web Analytics (posthog)
 - [] Ratelimiting(upstash)
 
 # Create T3 App
