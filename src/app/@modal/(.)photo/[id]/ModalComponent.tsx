@@ -1,9 +1,10 @@
 import { clerkClient } from "@clerk/nextjs/server";
-import { getImage } from "~/server/queries";
+import { deleteImage, getImage } from "~/server/queries";
 
 export default async function ModalComponent(props: { id: number }) {
   const image = await getImage(props.id);
   const uploaderInfo = await clerkClient.users.getUser(image.userId);
+  const idAsNumber = Number(props.id);
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="flex w-[90%] items-center justify-center bg-white ">
@@ -25,7 +26,20 @@ export default async function ModalComponent(props: { id: number }) {
                 {" "}
                 {new Date(image.createdAt).toLocaleDateString()}
               </p>
-            </div>
+            </div>{" "}
+            <form
+              action={async () => {
+                "use server";
+                await deleteImage(idAsNumber);
+              }}
+            >
+              <button
+                type="submit"
+                className="w-28 rounded-md bg-red-600 px-5 py-2"
+              >
+                Delete
+              </button>
+            </form>
           </div>
         </div>
       </div>
